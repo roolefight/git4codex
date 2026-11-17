@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "git-workbench",
+  "version": "0.6.0",
+  "description": "IDEA-style Git panel inside Codex: changes tree, Commit, Diff, Log, branches and stash.",
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "Git Workbench",
+        "shortDescription": "IDEA 式 Git 图形面板：Commit、Diff、Log",
+        "longDescription": "按当前会话项目自动发现并加载多个 Git 仓库或 worktree。仓库独立切换，保留各自提交草稿、选择与 Diff；提供 Commit、Log、Branches、Stash 图形操作。",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "打开当前工作区的 Git Workbench 图形面板",
+          "审阅这些修改并整理成提交",
+          "查看当前仓库的分支和提交历史"
+        ]
+      }
+    }
+  }
+}

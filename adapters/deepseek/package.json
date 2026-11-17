@@ -1,0 +1,10 @@
+{
+  "name": "dsh-plugin-git-workbench", "version": "0.1.0", "type": "module",
+  "license": "MIT",
+  "description": "Session Git panel with host RPC, staging, diff, history and branch tools.",
+  "main": "lib/host.cjs",
+  "exports": { ".": "./lib/host.cjs", "./client": "./lib/client.js", "./package.json": "./package.json" },
+  "files": ["lib", "cordis.patch.yml", "README.md", "licenses"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" }, "client": { "platform": "web", "inject": ["@deepseek-ai/dsh-client-ui-sidebar-right", "@deepseek-ai/dsh-client-ui-slots", "@deepseek-ai/dsh-client-ui-session", "@deepseek-ai/dsh-client-connection"] } },
+  "peerDependencies": { "@deepseek-ai/cordis": "^4.1.0", "@deepseek-ai/dsh-tools": ">=0.0.1-rc.1 <0.3.0" }
+}

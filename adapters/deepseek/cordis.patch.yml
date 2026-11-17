@@ -1,0 +1,3 @@
+- insert:
+    - id: git-workbench
+      name: dsh-plugin-git-workbench
